@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center container ms-2 w-100">
+  <%= simple_form_for(@restaurant) do |f|%>
+    <div class="form-input">
+      <div class="card p-2">
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :category, collection: Restaurant::CATEGORIES %>
+      </div>
+      <div>
+        <%= f.submit 'Add your restaurant', class: 'btn btn-primary'%>
+      </div>
+    </div>
+  <% end %>
+</div>
